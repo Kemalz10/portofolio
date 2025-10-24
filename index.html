@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kemal Habibie | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="topbar">
+            <div class="intro">
+                <h1>Kemal Habibie</h1>
+                <p>Siswa SMKN 1 Jakarta | Sistem INformasi Jaringan dan Aplikasi</p>
+            </div>
+            <nav>
+                <a href="#about">About Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+            </nav>
+        </div>
+
+        <img src="asset/WhatsApp Image 2025-10-24 at 19.42.39_b87be9ce.jpg" alt="Avatar" class="avatar" id="avatar">
+
+    </header>
+
+    <section id="about">
+        <div class="section-title">About Me</div>
+        <p>Halo! Saya <strong>Kemal Habibie Rahsan</strong>, seorang Siswa SMK jurusan Sistem Informasi Jaringan dan
+            Aplikasi.
+            Saya senang mempelajari hal baru di dunia teknologi, serta berusaha menghadirkan karya seperti website dan
+            game menarik lainnya.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="card">
+                <img src="asset/Screenshot 2025-10-24 201507.png" alt="Project 1">
+                <div class="card-content">
+                    <h3>Game Bola Sederhana</h3>
+                    <p>Game sepak bola 2D yang dibuat menggunakan JavaScript canvas dan logika sederhana.</p>
+                    <div class="tags">
+                        <span class="tag">Web</span>
+                        <span class="tag">Responsive</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="asset/Screenshot 2025-10-24 195424.png" alt="Project 2">
+                <div class="card-content">
+                    <h3>Website Portofolio</h3>
+                    <p>Website pribadi modern dengan HTML, CSS, dan sedikit interaksi JavaScript.</p>
+                </div>
+            </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-title">Skills</div>
+        <div class="skills-list">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">C++</div>
+            <div class="skill">MySQL</div>
+        </div>
+    </section>
+
+    <div class="social-links">
+            <a href="https://github.com/usernamekamu" target="_blank">
+                <img src="asset/github.png" alt="GitHub Logo">
+                GitHub
+            </a>
+            <a href="https://linkedin.com/in/usernamekamu" target="_blank">
+                <img src="asset/linkedin.webp" alt="LinkedIn Logo">
+                LinkedIn
+            </a>
+        </div>
+
+
+    <footer>
+        &copy; 2025 Kemal Habibie. All rights reserved.
+    </footer>
+
+    <script>
+        const uploadAvatar = document.getElementById('uploadAvatar');
+        const avatar = document.getElementById('avatar');
+
+        uploadAvatar.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    avatar.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
